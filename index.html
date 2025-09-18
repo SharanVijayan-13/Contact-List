@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 2</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Contact</h2>
+      <!-- Search Section -->
+      <section class="search-container">
+        <div class="search-wrapper">
+          <i class="fas fa-search search-icon"></i>
+          <input
+            type="text"
+            id="searchBar"
+            placeholder="Search contacts..."
+            aria-label="Search Contact"
+            autocomplete="off"
+          />
+        </div>
+        <span id="totalCount">Total: 0</span>
+      </section>
+      <!-- Add Contact Section -->
+      <section class="add-name">
+        <div class="input-group">
+          <input
+            type="text"
+            id="addName"
+            placeholder="Enter name"
+            aria-label="Enter name"
+            autocomplete="off"
+          />
+          <div class="error-message">Name is required</div>
+        </div>
+        <div class="input-group">
+          <input
+            type="tel"
+            id="addNumber"
+            placeholder="Enter number"
+            aria-label="Enter number"
+            autocomplete="off"
+          />
+          <div class="error-message">Valid number is required</div>
+        </div>
+        <button id="addBtn" type="button">
+          <i class="fas fa-plus"></i>
+          Add
+        </button>
+      </section>
+      <!-- Letter Count Stats -->
+      <section class="letter-stats" id="letterStatsSection">
+        <div class="stats-title">
+          <i class="fas fa-chart-bar"></i>
+          Contacts by Letter
+        </div>
+        <div class="stats-grid" id="letterStats"></div>
+      </section>
+      <!-- Results -->
+      <ul id="result"></ul>
+    </div>
+    <!-- Delete Confirmation Modal -->
+    <div id="deleteModal" class="modal-overlay">
+      <div class="modal">
+        <h3>Delete Contact</h3>
+        <p>Are you sure you want to delete this contact?</p>
+        <div class="modal-actions">
+          <button class="modal-btn cancel" onclick="closeDeleteModal()">
+            Cancel
+          </button>
+          <button class="modal-btn confirm" onclick="confirmDelete()">
+            Delete
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./main.js"></script>
+</html>
