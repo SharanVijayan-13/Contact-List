@@ -306,7 +306,7 @@ h2 {
     color: white;
 }
 .modal-btn.confirm:hover {
-    background: #dc2626;
+    background: #ba1111;
 }
 /* Mobile Responsive */
 @media (max-width: 600px) {
